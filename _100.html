@@ -1,0 +1,29 @@
+<html> 
+	<head> 
+		<title>100 sites in 100 days</title>
+		<link rel="stylesheet" href="../main.css" type="text/css" /> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script> 
+			$(document).ready(function(){
+				var site = $("a:last").clone().appendTo("#recent"); 				
+			}); 
+/*
+			var last = 	$("li").last().text(); 
+			console.log(last); 
+			document.getElementById('recent').innerHTML = last; 
+*/
+	</script> 
+	</head>
+	<body> 
+		<h1>100 sites</h1>
+		
+		<p>I'm making building 100 sites in as many days. Here they are...</p>
+		
+		<p>The most recent site is <span id="recent"></span></p>
+		
+		<ol id="list">
+			<li><a href="biggify.html">Biggify</a></li>
+			<li><a href="tip.html">Tip Calculator</a>
+		</ol>
+	</body>
+</html>

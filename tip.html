@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Just The Tip</title>
+		<link rel="stylesheet" href="../main.css" type="text/css" />
+		<style type="text/css" media="screen">
+			div {
+				padding: 5px; 
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					// get the value
+					var meal = $("#meal").val(); 
+					
+					// calculate tips 
+					var badTip = meal * .10; 
+					var goodTip = meal * .15; 
+					var greatTip = meal * .20;
+					var badTipTotal = parseFloat(badTip) + parseFloat(meal); 
+					var goodTipTotal = parseFloat(goodTip) + parseFloat(meal); 
+					var greatTipTotal = parseFloat(greatTip) + parseFloat(meal); 
+					
+				
+					$("#badTip").text("(10%) $" + badTip.toFixed(2) + " + $" + meal + " is $" + badTipTotal.toFixed(2)); 
+					$("#goodTip").text ("(15%) $" + goodTip.toFixed(2) + " + $" + meal + " is $" + goodTipTotal.toFixed(2)); 
+					$("#greatTip").text("(20%) $" + greatTip.toFixed(2) + " + $" + meal + " is $" + greatTipTotal.toFixed(2)); 
+					
+
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h1>Tip Calculator</h1>
+		How much was the meal?<br /> 
+	 $<input type="text" name="meal" id="meal" placeholder="0.00" /><button>Calculate Tip</button>
+	 <hr /> 
+		 <div id="badTip"></div>
+		 <div id="goodTip"></div>
+		 <div id="greatTip"></div>
+	</body>
+</html>

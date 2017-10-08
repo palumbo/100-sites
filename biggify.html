@@ -1,0 +1,23 @@
+<html> 
+	<head> 
+		<title>Biggify</title>
+		<link rel="stylesheet" href="../main.css" type="text/css" /> 
+	</head>
+	<body> 
+		
+		<input type="text" id="input"> 
+		<button id="btn" onclick="myFunction()">Biggify</button>
+		
+		<p id="container"></p>
+		
+	</body>
+	<script> 
+	
+		function myFunction() { 
+			var input = document.getElementById('input').value; 
+			var ctn = document.getElementById('container'); 
+			ctn.style.fontSize = "1000%"; 
+			ctn.innerHTML = input; 
+		}		
+	</script> 
+</html>
