@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Firebase Test Project</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="mainDiv">
+			<h1 id="fireHeading">Firebase Web App</h1>
+			<textarea id="mainText" placeholder="Enter your text here..."></textarea>
+			<button id="submitBtn" onclick="submitClick">Submit</button>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyD2TXpqpMJuf83Q8CjRAMzR2J8Qkz-4usw",
+		    authDomain: "test-project-75c84.firebaseapp.com",
+		    databaseURL: "https://test-project-75c84.firebaseio.com",
+		    projectId: "test-project-75c84",
+		    storageBucket: "test-project-75c84.appspot.com",
+		    messagingSenderId: "144076749175"
+		  };
+		  firebase.initializeApp(config);
+	</script>
+	<script>
+		$(document).ready(function(){
+			var mainText = $("#mainText"); 
+			var submit = $("#submitBtn"); 
+			
+			var firebaseHeadingRef = firebase.database().ref().child("heading"); 
+			firebaseHeadingRef.on('value', function(snap){
+				$("#fireHeading").text(snap.val()); 
+			});
+			
+
+
+			$("#submitBtn").click(function(){
+				var message = $("#mainText").val(); 
+				var firebaseRef = firebase.database().ref(); 
+				
+				firebaseRef.push().set(message); 
+			}); 
+		}); 
+		
+		
+	</script>
+	</body>
+</html>

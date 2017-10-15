@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Tip Calculator - Improved</title>
+		<link rel="stylesheet" href="../main.css" type="css/text" /> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				function calculateTip(mealCost, tipPer) {
+					var tip = mealCost * tipPer;
+					return tip.toFixed(2);  
+				};
+				
+				$("button").click(function(){
+					var mealCost = parseFloat($("#mealCost").val()); 
+					var tipPer = parseFloat($("#tipPer").val()); 
+					var tip = calculateTip(mealCost, tipPer); 
+					var total = parseFloat(tip) + parseFloat(mealCost); 
+					$("#return").text("Tip: $" + tip + "+ Meal: $" + mealCost + "= Total: $" + total.toFixed(2)); 
+					$("#line").html("<hr>");
+
+					
+				}); 
+			}); 
+		</script>
+	</head>
+	<body>
+		<h1>Tip Calculator</h1>
+		How much was the meal? $<input type="text" name="mealCost" id="mealCost">
+		<br /> 
+		How much do you want to tip? 
+		<select name="tipPer" id="tipPer">
+			<option value=".10">10%</option>
+			<option value=".11">11%</option>
+			<option value=".12">12%</option>
+			<option value=".13">13%</option>
+			<option value=".14">14%</option>
+			<option value=".15">15%</option>
+			<option value=".16">16%</option>
+			<option value=".17">17%</option>
+			<option value=".18">18%</option>
+			<option value=".19">19%</option>
+			<option value=".21">21%</option>
+			<option value=".22">22%</option>
+			<option value=".23">23%</option>
+			<option value=".24">24%</option>
+			<option value=".25">25%</option>
+		</select>
+		<br /> 
+		<button>Calculate Tip</button>
+		<div id="line"></div>
+		<div id="return"></div>
+	</body>
+</html>
