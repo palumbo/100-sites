@@ -1,0 +1,42 @@
+body { 
+	background-color: black; 
+}
+
+h1 {
+	font-weight: 700; 
+}
+
+#searcharea {
+	padding-top: 60px; 
+	margin: 0 auto; 
+	text-align: center;  
+	width: 80%; 
+	margin-bottom: 40px; 
+}
+
+input {
+	text-align: center; 
+}
+
+
+table, th, td, tr .spells-table { 
+	border: 1px solid black; 
+	border-collapse: collapse; 
+}
+
+
+th, td, tr .spells-table { 
+	padding: 5px; 
+}
+
+th, .spells-table { 
+	text-align: left; 
+}
+
+.spell-title { 
+	color: #de3f54; 
+}
+
+.spell-description {
+	line-height: 180%; 
+}
