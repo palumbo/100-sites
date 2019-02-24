@@ -2,25 +2,56 @@
 	<head>
 		<title>Hacker News</title>
 		<link rel="stylesheet" href="../main.css" type="text/css" /> 
+		<style type="text/css" media="screen">
+			#gist {
+				display: none; 
+			}
+		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
+			$(document).ready(function(){ 
 			var output = ''; 
 			$.getJSON('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', function(topStories){
 				$.each(topStories, function(i, val){ 
 					var story = $.getJSON('https://hacker-news.firebaseio.com/v0/item/' + val + '.json?print=pretty', function(story){
 						console.log(story.title + ": " + story.url); 
-						$("#news").append('<li><a href="' + story.url + '">' + story.title + '</a></li>'); 
+						$("#news").append('<li><a target="_blank" href="' + story.url + '">' + story.title + '</a></li>'); 
 					}); 
 				}); 
 			});
+			
+				$("#btn-gist").click(function(){
+					$("#gist").toggle(); 
+				})
+				
+				$("#btn-tag").click(function(){
+					$("li:contains(Python)").css("background-color", "blue");
+					$("li:contains(JavaScript)").css("background-color", "yellow"); 
+					$("li:contains(Tesla)").css("background-color", "red"); 
+					$("li:contains(Elon)").css("background-color", "red"); 
+					$("li:contains(AWS)").css("background-color", "orange"); 
+					$("li:contains(WordPress)").css("background-color", "#4169e1"); 
+				});
 
+			
+			}); 
+		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109674775-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-109674775-1');
 		</script>
 	</head>
 	<body>
 		<h1>hn: top stories</h1>
+		<button id="btn-gist">view code</button><button id="btn-tag">highlight</button>
+		<div id="gist"><script src="https://gist.github.com/palumbo/9bff9eaeccaf2e20bc8751b2e1fd8d46.js"></script></div>
 		<div id="news-ctn">
-			<ul id="news">
-			</ul>
+			<ul id="news"></ul>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang=“en”>
+	<head>
+		<title>Spell Search</title>
+		<link rel="stylesheet" href="main.css"> 
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109674775-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-109674775-1');
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="containter"
+					<a class="brand" href="#">DM-Dashboard by Palumbo</a>
+				</div>
+			</div><!-- navbar-inner --> 
+		</div><!-- navbar navbar-fixed-top --> 
+		<div class="container-fluid">
+			<div id='searcharea'>
+				<h1>Spell Search</h1>
+				<label class="sr-only">Spell Search</label>
+				<!-- <p>Enter the name or info about a spell</p> --> 
+				<input type="search" name='search' id="search" placeholder="enter spell name or info" class="form-control-sm"/> 
+			</div><!-- searcharea --> 
+			<div id="update"></div>
+		</div><!-- container-fluid --> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script src="spell-search.js"></script>
+	</body>
+</html>
+
