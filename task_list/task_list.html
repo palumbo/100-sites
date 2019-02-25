@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="task_list.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Simple Task List</title>
+</head>
+<body>
+    <h1>Next Task</h1>
+
+
+        <input type="text" id="newActionItem"><button name="addActionItem" id="addActionItem" onclick="addActionItem()">Add Action Item</button>
+
+
+    <div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <button type="button" id="clearCompletedTasks" onclick="clearCompletedTasks()">Clear Completed Tasks</button>
+
+    <script src="task_list.js"></script>
+</body>
+</html>
