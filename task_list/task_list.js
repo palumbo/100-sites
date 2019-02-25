@@ -5,10 +5,11 @@ $(function() {
         let newActionItem = $('#newActionItem').val(); 
         $('#task-list').append(`<li class='action-item incomplete'>${newActionItem}</li>`); 
         $('#newActionItem').val('');
+        $('#newActionItem').focus(); 
     }; 
 
     // marks completed tasks
-    $(document).on('click', '.action-item', function(){
+    $('#task-list').on('click', '.action-item', function(){
         $(this).removeClass('incomplete').addClass('completed'); 
     }); 
 
