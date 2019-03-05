@@ -33,8 +33,7 @@ $(function(){
                     <td>${flaw}</td> 
                 </tr> 
             </table> 
-            `); 
-        
+        `); 
     }; 
 
     generateName = () => {
