@@ -1,0 +1,44 @@
+body {
+
+}
+
+.wrapper {
+    max-width: 1020px;
+    height: 150px; 
+    margin: 0 auto; 
+    border: 1px solid orange; 
+    text-align: center; 
+}
+
+
+.dice-box h1 {
+}
+
+.dice-box {
+    border: 1px solid black;
+    text-align: center;
+    height: 100px;
+    /* float: left;  */
+    width: 15%;
+    padding: 1%;
+    margin: 1%; 
+    display: inline-block;
+}
+
+.dice-box p {
+    border: 1px solid red; 
+    /* height: 20px; */
+}
+
+.instructions {
+    border: 1px solid black; 
+    clear: both; 
+    max-width: 500px;
+    margin: 0 auto; 
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+.instructions li {
+    list-style: none;
+}
